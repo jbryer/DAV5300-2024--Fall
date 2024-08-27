@@ -42,7 +42,7 @@ website:
         text: "Yeshiva University"
         menu:
           - text: Canvas
-            url: https://canvas.instructure.com
+            url: https://yu.instructure.com
             target: _blank
           - text: Program Page
             url: https://www.yu.edu/katz/data-analytics
