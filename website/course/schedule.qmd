@@ -54,7 +54,7 @@ for(i in names(column_mapping)) {
 	}
 }
 
-schedule <- schedule |> dplyr::select(!c(StartTime, EndTime))
+# schedule <- schedule |> dplyr::select(!c(StartTime, EndTime))
 schedule |>
 	knitr::kable(format = 'html',
 				 escape = FALSE, 
