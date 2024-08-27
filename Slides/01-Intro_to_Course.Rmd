@@ -2,7 +2,7 @@
 title: "Introduction to DAV 5300"
 subtitle: "Computational Mathematics and Statistics"
 author: Jason Bryer, Ph.D.
-date: "Fall 2024"
+date: "August 27, 2024"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -52,7 +52,7 @@ background-size: contain
 # Agenda
 
 .pull-left[
-* About your instructor
+* Introductions
 
 * Syllabus
 
@@ -121,11 +121,19 @@ knitr::include_graphics('images/Sleeping_Empire.jpg')
 
 # Syllabus `r hexes(c('blogdown', 'rmarkdown'))`
 
-Syllabus and course materials are here: [https://github.com/jbryer/DAV5300-2024-Spring](https://github.com/jbryer/DAV5300-2024-Spring)
+.pull-left[
+Syllabus and course materials are here: `r course_site`
 
 We will use Canvas primary for submitting assignments only. Please submit PDFs.
 
 PDFs are preferred for the homework as there is some LaTeX formatting in the R markdown files. The `tineytex` R package helps with install LaTeX, but you can also install LaTeX using [MiKTeX](http://miktex.org) (for Windows) and [BasicTeX](http://www.tug.org/mactex/morepackages.html) (for Mac).
+
+]
+.pull-right[
+```{r, echo=FALSE, fig.width=5, fig.height=5}
+qrcode::qr_code(course_site) |> plot(col = c('#FAFAFA', 'black'))
+```
+]
 
 ---
 class: font90
@@ -139,9 +147,10 @@ In order to get the most out of this class attendance is required.
 **One Minute Papers** - Complete the one minute paper after each Meetup (whether you watch live or watch the recordings). It should take approximately one to two minutes to complete. 
 
 ---
-class: font70
+class: font60
 # Schedule
 
+.pull-left[
 ```{r schedule-setup, echo=FALSE, warning=FALSE, message=FALSE}
 # devtools::install_github("gadenbuie/ggweekly")
 library(ggweekly)
@@ -200,18 +209,23 @@ end_day <- lubridate::ceiling_date(max(meetups$day), "month") - 1
 topics$Start <- format(topics$Start, format = '%A, %B %d, %Y')
 topics$End <- format(topics$End, format = '%A, %B %d, %Y')
 # topics <- topics %>% filter(!is.na(Link)) %>% select(-Link)
-knitr::kable(topics[,c('Start','End','Topic')], format = 'html', escape = FALSE)
+knitr::kable(topics[,c('Start','Topic')], format = 'html', escape = FALSE)
 ```
+]
+.pull-right[
+Assignments are due on Monday before the next class.
+]
 
 ---
 # Textbooks `r hexes(c('openintro'))`
 
 
-[*Introduction to Modern Statistics*](materials/imstat.pdf) by Mine Çetinkaya-Rundel and Johanna Hardin - This will be the primary textbook.
+[*OpenIntro Statistics*](https://fall2024.dav5300.net/materials/Textbooks/os4.pdf) by David Diaz, Mine Çetinkaya-Rundel, and Christopher D Barr.
+
+[**]()
 
 [*R for Data Science*](https://r4ds.hadley.nz) by Hadley Wickham and Garrett Grolemund - Recommended reference for those new to R.
 
-[*OpenIntro Statistics*](materials/os4.pdf) by David Diaz, Mine Çetinkaya-Rundel, and Christopher D Barr.
 
 
 
