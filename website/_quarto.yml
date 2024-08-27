@@ -33,7 +33,6 @@ website:
       - icon: calendar-check
         href: course/schedule.qmd
         text: "Schedule"
-        # color: '#FFFFFF'
       - icon: github
         href: https://github.com/jbryer/DAV5300-2024--Fall
         text: "Github"
@@ -57,32 +56,20 @@ website:
     contents:
       - href: "index.qmd"
         text: "Announcements"
-      - href: course/schedule.qmd
-        text: Schedule
+      - href: "course/schedule.qmd"
+        text: "Schedule"
       - section: "Course information"
         contents:
-          - href: course/syllabus.qmd
-            text: Syllabus
-          - href: course/instructor.qmd
-            text: Instructor
-          - href: course/textbooks.qmd
-            text: Textbooks
-          - href: course/software.qmd
-            text: Software
-          - href: course/materials.qmd
-            text: Materials
-      # - section: "Assignments"
-      #   contents:
-      #     - href: assignments/participation.qmd
-      #       text: "Participation"
-      #     - href: assignments/labs.qmd
-      #       text: "Labs"
-      #     - href: assignments/project.qmd
-      #       text: "Project"
-      #     - href: assignments/exams.qmd
-      #       text: "Exams"
-      #     - href: assignments/homework.qmd
-      #       text: "Homework"
+          - href: "course/syllabus.qmd"
+            text: "Syllabus"
+          - href: "course/instructor.qmd"
+            text: "Instructor"
+          - href: "course/textbooks.qmd"
+            text: "Textbooks"
+          - href: "course/software.qmd"
+            text: "Software"
+          - href: "course/materials.qmd"
+            text: "Materials"
       - section: "Topics"
         contents:
           - href: chapters/chapter1.qmd
