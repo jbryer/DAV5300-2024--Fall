@@ -80,7 +80,7 @@ class: font120
 
 * Earned my Ph.D. in Educational Pschology and Methodology from the University at Albany. Dissertation: [A National Study Comparing Charter and Traditional Public Schools Using Propensity Score Analysis](https://github.com/jbryer/dissertation)
 * Assistant Professor at CUNY in Data Science and Information Systems
-* Principal Investigator for a Department of Education Grant (part of their FIPSE First in the World program) to develop a Diagnostic Assessment and Achievement of College Skills ([www.DAACS.net](http://www.daacs.net))  
+* Principal Investigator for a Department of Education Grant to develop and test the Diagnostic Assessment and Achievement of College Skills ([www.DAACS.net](http://www.daacs.net))  
 * Authored over a dozen R packages including:
 	* [likert](http://github.com/jbryer/likert)
 	* [sqlutils](http://github.com/jbryer/sqlutils)
