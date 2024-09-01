@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fall2024.dav5300.net/posts/2024-08-28-Welcome.html</loc>
-    <lastmod>2024-08-08T22:05:15.641Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fall2024.dav5300.net/course/textbooks.html</loc>
-    <lastmod>2024-08-23T14:30:39.827Z</lastmod>
-  </url>
-  <url>
     <loc>https://fall2024.dav5300.net/course/software.html</loc>
     <lastmod>2024-08-08T22:17:21.128Z</lastmod>
   </url>
   <url>
+    <loc>https://fall2024.dav5300.net/course/syllabus.html</loc>
+    <lastmod>2024-08-27T16:26:06.490Z</lastmod>
+  </url>
+  <url>
     <loc>https://fall2024.dav5300.net/course/materials.html</loc>
     <lastmod>2024-08-27T16:42:47.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fall2024.dav5300.net/assignments/homework.html</loc>
+    <lastmod>2024-06-29T22:02:25.260Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fall2024.dav5300.net/course/textbooks.html</loc>
+    <lastmod>2024-08-23T14:30:39.827Z</lastmod>
   </url>
   <url>
     <loc>https://fall2024.dav5300.net/chapters/chapter9.html</loc>
@@ -37,12 +41,8 @@
     <lastmod>2024-06-28T20:22:01.904Z</lastmod>
   </url>
   <url>
-    <loc>https://fall2024.dav5300.net/assignments/project.html</loc>
-    <lastmod>2024-08-13T21:39:28.743Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fall2024.dav5300.net/assignments/labs.html</loc>
-    <lastmod>2024-06-29T21:58:09.121Z</lastmod>
+    <loc>https://fall2024.dav5300.net/assignments/participation.html</loc>
+    <lastmod>2024-08-13T20:40:14.101Z</lastmod>
   </url>
   <url>
     <loc>https://fall2024.dav5300.net/assignments/exams.html</loc>
@@ -53,12 +53,8 @@
     <lastmod>2024-06-29T21:59:52.334Z</lastmod>
   </url>
   <url>
-    <loc>https://fall2024.dav5300.net/assignments/homework.html</loc>
-    <lastmod>2024-06-29T22:02:25.260Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fall2024.dav5300.net/assignments/participation.html</loc>
-    <lastmod>2024-08-13T20:40:14.101Z</lastmod>
+    <loc>https://fall2024.dav5300.net/assignments/labs.html</loc>
+    <lastmod>2024-06-29T21:58:09.121Z</lastmod>
   </url>
   <url>
     <loc>https://fall2024.dav5300.net/chapters/bayesian.html</loc>
@@ -85,15 +81,19 @@
     <lastmod>2024-08-23T14:31:55.099Z</lastmod>
   </url>
   <url>
+    <loc>https://fall2024.dav5300.net/index.html</loc>
+    <lastmod>2024-06-30T14:34:15.800Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fall2024.dav5300.net/assignments/project.html</loc>
+    <lastmod>2024-08-13T21:39:28.743Z</lastmod>
+  </url>
+  <url>
     <loc>https://fall2024.dav5300.net/course/schedule.html</loc>
     <lastmod>2024-08-27T20:24:42.389Z</lastmod>
   </url>
   <url>
-    <loc>https://fall2024.dav5300.net/course/syllabus.html</loc>
-    <lastmod>2024-08-27T16:26:06.490Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fall2024.dav5300.net/index.html</loc>
-    <lastmod>2024-06-30T14:34:15.800Z</lastmod>
+    <loc>https://fall2024.dav5300.net/posts/2024-08-28-Welcome.html</loc>
+    <lastmod>2024-08-08T22:05:15.641Z</lastmod>
   </url>
 </urlset>
