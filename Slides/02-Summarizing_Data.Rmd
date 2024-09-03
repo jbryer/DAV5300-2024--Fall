@@ -2,7 +2,7 @@
 title: "Summarizing Data"
 subtitle: "Computational Mathematics and Statistics"
 author: Jason Bryer, Ph.D.
-date: "September 2, 2024"
+date: "September 3, 2024"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -64,6 +64,77 @@ library(tidyverse)
 ```
 ]
 
+---
+# Familiarity with Statistical Topics `r hexes(c('googlesheets4','likert'))`
+
+```{r, echo = FALSE, cache = FALSE, message = FALSE, warning = FALSE}
+library(googlesheets4)
+
+results <- googlesheets4::read_sheet(formative_assessmnet_results) %>% as.data.frame()
+mass.items <- c('I find math interesting.',
+				'I get uptight during math tests.',
+				'I think that I will use math in the future.',
+				'Mind goes blank and I am unable to think clearly when doing my math test.',
+				'Math relates to my life.',
+				'I worry about my ability to solve math problems.',
+				'I get a sinking feeling when I try to do math problems.',
+				'I find math challenging.',
+				'Mathematics makes me feel nervous.',
+				'I would like to take more math classes.',
+				'Mathematics makes me feel uneasy.',
+				'Math is one of my favorite subjects.',
+				'I enjoy learning with mathematics.',
+				'Mathematics makes me feel confused.')
+mass.results <- results[,5:18]
+for(i in 1:ncol(mass.results)) {
+	mass.results[,i] <- factor(mass.results[,i],
+						  levels = c('Strongly Disagree', 'Disagree', 'Neutral',
+						  		   'Agree', 'Strongly Agree'),
+						  ordered = TRUE)
+}
+names(mass.results) <- mass.items
+
+stats.items <- c('Descriptive Statistics',
+                 'Probability',
+                 'Data visualizations',
+				 'Correlation',
+                 'Central limit theorem',
+                 'Null hypothesis testing',
+				 'ANOVA',
+				 'Chi-squared tests',
+				 'Type I and II errors',
+                 'Assumptions for regression',
+                 'Linear regression',
+                 'Multiple regression',
+				 'Logistic regression',
+                 'Predictive modeling',
+                 'SPSS',
+                 'R',
+                 'Python')
+
+stats.results <- results[,19:35]
+for(i in 1:ncol(stats.results)) {
+	stats.results[,i] <- factor(stats.results[,i],
+						  levels = c('Not at all familiar', 'Sligtly familiar',
+						  		     'Somewhat familiar',
+						  		     'Moderately familiar', 'Extremely familiar'),
+						  ordered = TRUE)
+}
+names(stats.results) <- stats.items
+```
+
+
+
+```{r, fig.width=12, fig.align='center'}
+likert(stats.results) %>% plot(center = 2.5)
+```
+
+---
+# Math Anxiety Survey Scale `r hexes(c('googlesheets4','likert'))`
+
+```{r, fig.width = 12, fig.align='center'}
+likert(mass.results) %>% plot()
+```
 
 
 ---
