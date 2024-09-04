@@ -285,7 +285,7 @@ mylego <- legosets %>% filter(themeGroup == 'Educational' & year > 2015)
 ### Base R
 
 ```{r, eval=FALSE}
-mylego <- legosets[legosets$themeGroups == 'Educaitonal' & legosets$year > 2015,]
+mylego <- legosets[legosets$themeGroups == 'Educational' & legosets$year > 2015,]
 ```
 
 <hr />

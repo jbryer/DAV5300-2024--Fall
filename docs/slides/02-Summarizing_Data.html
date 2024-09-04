@@ -4,7 +4,7 @@
     <title>Summarizing Data</title>
     <meta charset="utf-8" />
     <meta name="author" content="Jason Bryer, Ph.D." />
-    <meta name="date" content="2024-09-02" />
+    <meta name="date" content="2024-09-03" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/htmltools-fill/fill.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
@@ -31,7 +31,7 @@ class: center, middle, inverse, title-slide
 # Summarizing Data
 ## Computational Mathematics and Statistics
 ### Jason Bryer, Ph.D.
-### September 2, 2024
+### September 3, 2024
 
 
 ---
@@ -48,6 +48,29 @@ class: center, middle, inverse, title-slide
 &lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
+---
+# Familiarity with Statistical Topics &lt;img src="images/hex/likert.png" class="title-hex"&gt;&lt;img src="images/hex/googlesheets4.png" class="title-hex"&gt;
+
+
+
+
+
+
+``` r
+likert(stats.results) %&gt;% plot(center = 2.5)
+```
+
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+# Math Anxiety Survey Scale &lt;img src="images/hex/likert.png" class="title-hex"&gt;&lt;img src="images/hex/googlesheets4.png" class="title-hex"&gt;
+
+
+``` r
+likert(mass.results) %&gt;% plot()
+```
+
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -601,7 +624,7 @@ ls('package:ggplot2')[grep('^geom_', ls('package:ggplot2'))]
 ggplot(legosets, aes(x=pieces, y=US_retailPrice)) + geom_point()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-32-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Scatterplot (cont.)  &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -611,7 +634,7 @@ ggplot(legosets, aes(x=pieces, y=US_retailPrice)) + geom_point()
 ggplot(legosets, aes(x=pieces, y=US_retailPrice, color=availability)) + geom_point()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-33-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-36-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Scatterplot (cont.)  &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -621,7 +644,7 @@ ggplot(legosets, aes(x=pieces, y=US_retailPrice, color=availability)) + geom_poi
 ggplot(legosets, aes(x=pieces, y=US_retailPrice, size=minifigs, color=availability)) + geom_point()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-34-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-37-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Scatterplot (cont.)  &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -631,7 +654,7 @@ ggplot(legosets, aes(x=pieces, y=US_retailPrice, size=minifigs, color=availabili
 ggplot(legosets, aes(x=pieces, y=US_retailPrice, size=minifigs)) + geom_point() + facet_wrap(~ availability)
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-38-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Boxplots  &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -641,7 +664,7 @@ ggplot(legosets, aes(x=pieces, y=US_retailPrice, size=minifigs)) + geom_point() 
 ggplot(legosets, aes(x='Lego', y=US_retailPrice)) + geom_boxplot()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-36-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-39-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Boxplots (cont.)  &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -651,7 +674,7 @@ ggplot(legosets, aes(x='Lego', y=US_retailPrice)) + geom_boxplot()
 ggplot(legosets, aes(x=availability, y=US_retailPrice)) + geom_boxplot()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-37-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-40-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Boxplot (cont.)  &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -661,7 +684,7 @@ ggplot(legosets, aes(x=availability, y=US_retailPrice)) + geom_boxplot()
 ggplot(legosets, aes(x=availability, y=US_retailPrice)) + geom_boxplot() + coord_flip()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-38-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-41-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Histograms &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -671,7 +694,7 @@ ggplot(legosets, aes(x=availability, y=US_retailPrice)) + geom_boxplot() + coord
 ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(binwidth = 25)
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-39-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Histograms (cont.)&lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -681,7 +704,7 @@ ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(binwidth = 25)
 ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(bins = 15) + scale_x_log10()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-40-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Histograms (cont.) &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -691,7 +714,7 @@ ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(bins = 15) + scale_x_
 ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(binwidth = 25) + facet_wrap(~ availability)
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-41-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Density Plots &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -701,7 +724,7 @@ ggplot(legosets, aes(x = US_retailPrice)) + geom_histogram(binwidth = 25) + face
 ggplot(legosets, aes(x = US_retailPrice, color = availability)) + geom_density()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-45-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Density Plots (cont.) &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -711,7 +734,7 @@ ggplot(legosets, aes(x = US_retailPrice, color = availability)) + geom_density()
 ggplot(legosets, aes(x = US_retailPrice, color = availability)) + geom_density() + scale_x_log10()
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-46-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # `ggplot2` aesthetics &lt;img src="images/hex/ggplot2.png" class="title-hex"&gt;
@@ -777,7 +800,7 @@ summary(l24)
 plot(l24)
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-46-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-49-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # `likert` Plots  &lt;img src="images/hex/likert.png" class="title-hex"&gt;
@@ -787,7 +810,7 @@ plot(l24)
 plot(l24, type='heat')
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-47-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-50-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # `likert` Plots  &lt;img src="images/hex/likert.png" class="title-hex"&gt;
@@ -797,7 +820,7 @@ plot(l24, type='heat')
 plot(l24, type='density')
 ```
 
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-48-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-51-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -854,7 +877,7 @@ class: left, font140
 2. What important question remains unanswered for you?
 ]
 .pull-right[
-&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-49-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="02-Summarizing_Data_files/figure-html/unnamed-chunk-52-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 https://forms.gle/U4UXAosdjHorxY919
