@@ -1,8 +1,8 @@
 ---
 title: "Probability & Distributions"
 subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
-author: Jason Bryer, Ph.D. and Angela Lui, Ph.D.
-date: "February 21, 2024"
+author: Jason Bryer, Ph.D.
+date: "September 10, 2024"
 output:
   xaringan::moon_reader:
     css: ["assets/mtheme_max.css", "assets/fonts_mtheme_max.css"]
@@ -18,7 +18,7 @@ output:
         scroll: false
     includes:
       in_header: [assets/header.html]
-      after_body: [assets/insert-logo.html]
+      # after_body: [assets/insert-logo.html]
 editor_options: 
   chunk_output_type: console
 ---

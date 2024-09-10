@@ -3,8 +3,8 @@
   <head>
     <title>Probability &amp; Distributions</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Jason Bryer, Ph.D. and Angela Lui, Ph.D." />
-    <meta name="date" content="2024-02-21" />
+    <meta name="author" content="Jason Bryer, Ph.D." />
+    <meta name="date" content="2024-09-10" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/mtheme_max.css" type="text/css" />
@@ -21,8 +21,8 @@ class: center, middle, inverse, title-slide
 
 # Probability &amp; Distributions
 ## DATA 606 - Statistics &amp; Probability for Data Analytics
-### Jason Bryer, Ph.D. and Angela Lui, Ph.D.
-### February 21, 2024
+### Jason Bryer, Ph.D.
+### September 10, 2024
 
 ---
 # One Minute Paper Results
@@ -280,7 +280,7 @@ head(vals, n=10)
 ```
 
 ```
-##  [1] -1  1  1 -1  4 -1 -1  9 -1 -1
+##  [1] -1 -1 -1 -1 -1 -1 -1 -1  1 -1
 ```
 
 ``` r
@@ -288,7 +288,7 @@ mean(vals)
 ```
 
 ```
-## [1] -0.345
+## [1] -0.482
 ```
 ]
 .pull-right[
@@ -373,7 +373,7 @@ mean(runs)
 ```
 
 ```
-## [1] -0.4559
+## [1] -0.3326
 ```
 
 ---
@@ -396,8 +396,8 @@ sample(letters)
 ```
 
 ```
-##  [1] "v" "k" "a" "i" "t" "o" "b" "c" "m" "e" "u" "n" "f" "s" "w" "j" "p" "h" "g"
-## [20] "x" "q" "z" "l" "d" "y" "r"
+##  [1] "b" "f" "g" "m" "k" "u" "d" "h" "t" "r" "q" "w" "c" "v" "p" "l" "n" "a" "x"
+## [20] "e" "z" "s" "y" "j" "o" "i"
 ```
 
 ---
@@ -411,7 +411,7 @@ sample(letters, size = 1)
 ```
 
 ```
-## [1] "y"
+## [1] "u"
 ```
 
 The `replace` will ensure that each randomly selected value is independent of the others.
@@ -422,8 +422,8 @@ sample(letters, size = 30, replace = TRUE)
 ```
 
 ```
-##  [1] "a" "n" "n" "a" "u" "g" "w" "q" "y" "e" "e" "e" "m" "i" "c" "y" "e" "f" "h"
-## [20] "h" "x" "a" "x" "c" "r" "k" "l" "j" "p" "x"
+##  [1] "l" "v" "k" "w" "t" "v" "d" "u" "k" "m" "q" "w" "h" "p" "x" "y" "k" "f" "p"
+## [20] "u" "p" "s" "n" "r" "a" "t" "t" "l" "a" "t"
 ```
 
 ---
@@ -436,7 +436,7 @@ sample(coin)
 ```
 
 ```
-## [1] "H" "T"
+## [1] "T" "H"
 ```
 
 ``` r
@@ -444,7 +444,7 @@ sample(coin, 1)
 ```
 
 ```
-## [1] "H"
+## [1] "T"
 ```
 
 ``` r
@@ -452,12 +452,12 @@ sample(coin, 100, replace = TRUE)
 ```
 
 ```
-##   [1] "H" "T" "T" "T" "H" "H" "H" "T" "T" "H" "T" "H" "T" "H" "H" "H" "T" "T"
-##  [19] "T" "T" "H" "T" "T" "H" "T" "T" "H" "H" "T" "H" "H" "H" "H" "H" "T" "H"
-##  [37] "H" "H" "T" "T" "H" "H" "H" "T" "H" "T" "H" "H" "H" "T" "H" "H" "H" "H"
-##  [55] "H" "T" "T" "T" "T" "H" "H" "H" "H" "T" "H" "T" "T" "H" "T" "T" "H" "T"
-##  [73] "T" "T" "H" "H" "T" "H" "H" "T" "T" "H" "H" "H" "T" "H" "H" "T" "H" "H"
-##  [91] "T" "H" "T" "T" "T" "H" "H" "T" "T" "T"
+##   [1] "T" "H" "H" "H" "T" "T" "H" "T" "H" "T" "T" "H" "H" "T" "H" "T" "H" "T"
+##  [19] "T" "T" "T" "T" "H" "T" "H" "H" "T" "T" "T" "H" "T" "T" "T" "H" "T" "H"
+##  [37] "T" "T" "H" "T" "H" "T" "T" "T" "T" "T" "T" "H" "T" "H" "H" "H" "T" "H"
+##  [55] "H" "H" "H" "H" "T" "H" "T" "H" "T" "T" "H" "T" "T" "T" "H" "T" "H" "H"
+##  [73] "T" "H" "T" "H" "T" "T" "T" "H" "T" "H" "H" "H" "H" "H" "H" "H" "T" "T"
+##  [91] "H" "H" "T" "T" "H" "H" "T" "T" "H" "T"
 ```
 
 ---
@@ -1105,34 +1105,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-<!-- Source: https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/ -->
-<style>
-.logo {
-  background-image: url(images/hex/DATA606.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  bottom: 2em;
-  right: 0.5em;
-  width: 55px;
-  height: 64px;
-  z-index: 0;
-}
-</style>
-
-<script>
-document
-  .querySelectorAll(
-    '.remark-slide-content' +
-    ':not(.title-slide)' +
-    // add additional classes to exclude here, e.g.
-    // ':not(.inverse)' +
-    ':not(.hide-logo)'
-  )
-  .forEach(el => {
-    el.innerHTML += '<div class="logo"></div>';
-  });
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
