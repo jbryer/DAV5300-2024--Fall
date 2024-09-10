@@ -1,6 +1,6 @@
 ---
 title: "Probability & Distributions"
-subtitle: "DATA 606 - Statistics & Probability for Data Analytics"
+subtitle: "Computational Mathematics and Statistics"
 author: Jason Bryer, Ph.D.
 date: "September 10, 2024"
 output:

@@ -20,7 +20,7 @@
 class: center, middle, inverse, title-slide
 
 # Probability &amp; Distributions
-## DATA 606 - Statistics &amp; Probability for Data Analytics
+## Computational Mathematics and Statistics
 ### Jason Bryer, Ph.D.
 ### September 10, 2024
 
@@ -280,7 +280,7 @@ head(vals, n=10)
 ```
 
 ```
-##  [1] -1 -1 -1 -1 -1 -1 -1 -1  1 -1
+##  [1] -1 -1 -1 -1  0 -1  1 -1 -1 -1
 ```
 
 ``` r
@@ -288,7 +288,7 @@ mean(vals)
 ```
 
 ```
-## [1] -0.482
+## [1] -0.465
 ```
 ]
 .pull-right[
@@ -373,7 +373,7 @@ mean(runs)
 ```
 
 ```
-## [1] -0.3326
+## [1] -0.4252
 ```
 
 ---
@@ -396,8 +396,8 @@ sample(letters)
 ```
 
 ```
-##  [1] "b" "f" "g" "m" "k" "u" "d" "h" "t" "r" "q" "w" "c" "v" "p" "l" "n" "a" "x"
-## [20] "e" "z" "s" "y" "j" "o" "i"
+##  [1] "x" "b" "o" "r" "n" "u" "q" "k" "g" "a" "e" "f" "y" "w" "l" "s" "i" "p" "z"
+## [20] "c" "h" "j" "d" "v" "m" "t"
 ```
 
 ---
@@ -411,7 +411,7 @@ sample(letters, size = 1)
 ```
 
 ```
-## [1] "u"
+## [1] "g"
 ```
 
 The `replace` will ensure that each randomly selected value is independent of the others.
@@ -422,8 +422,8 @@ sample(letters, size = 30, replace = TRUE)
 ```
 
 ```
-##  [1] "l" "v" "k" "w" "t" "v" "d" "u" "k" "m" "q" "w" "h" "p" "x" "y" "k" "f" "p"
-## [20] "u" "p" "s" "n" "r" "a" "t" "t" "l" "a" "t"
+##  [1] "j" "i" "i" "a" "d" "c" "g" "o" "u" "z" "f" "e" "c" "k" "a" "a" "c" "w" "l"
+## [20] "l" "c" "b" "t" "n" "s" "x" "r" "e" "r" "o"
 ```
 
 ---
@@ -436,7 +436,7 @@ sample(coin)
 ```
 
 ```
-## [1] "T" "H"
+## [1] "H" "T"
 ```
 
 ``` r
@@ -452,12 +452,12 @@ sample(coin, 100, replace = TRUE)
 ```
 
 ```
-##   [1] "T" "H" "H" "H" "T" "T" "H" "T" "H" "T" "T" "H" "H" "T" "H" "T" "H" "T"
-##  [19] "T" "T" "T" "T" "H" "T" "H" "H" "T" "T" "T" "H" "T" "T" "T" "H" "T" "H"
-##  [37] "T" "T" "H" "T" "H" "T" "T" "T" "T" "T" "T" "H" "T" "H" "H" "H" "T" "H"
-##  [55] "H" "H" "H" "H" "T" "H" "T" "H" "T" "T" "H" "T" "T" "T" "H" "T" "H" "H"
-##  [73] "T" "H" "T" "H" "T" "T" "T" "H" "T" "H" "H" "H" "H" "H" "H" "H" "T" "T"
-##  [91] "H" "H" "T" "T" "H" "H" "T" "T" "H" "T"
+##   [1] "T" "T" "T" "H" "T" "H" "T" "H" "H" "H" "T" "H" "H" "H" "T" "H" "T" "T"
+##  [19] "T" "T" "H" "H" "T" "T" "H" "H" "H" "T" "H" "H" "H" "H" "H" "H" "T" "H"
+##  [37] "H" "T" "H" "T" "T" "T" "H" "H" "T" "T" "T" "T" "T" "H" "H" "T" "T" "T"
+##  [55] "T" "T" "T" "T" "H" "H" "H" "H" "H" "T" "H" "H" "T" "T" "H" "T" "T" "H"
+##  [73] "T" "H" "T" "H" "H" "T" "H" "T" "H" "T" "T" "T" "T" "H" "T" "T" "H" "T"
+##  [91] "H" "T" "H" "H" "T" "T" "H" "T" "T" "T"
 ```
 
 ---
