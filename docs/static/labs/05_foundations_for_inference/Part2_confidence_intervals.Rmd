@@ -290,6 +290,12 @@ shinyApp(
 
 **Insert your answer here**
 
+![](imagefile.png)
+
+```{r, echo=FALSE}
+knitr::include_graphics('filename.png')
+```
+
 * * *
 
 ## More Practice

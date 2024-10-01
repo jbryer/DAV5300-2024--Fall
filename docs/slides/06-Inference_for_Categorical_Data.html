@@ -43,7 +43,11 @@ class: center, middle, inverse, title-slide
 
 Two scientists want to know if a certain drug is effective against high blood pressure. The first scientist wants to give the drug to 1,000 people with high blood pressure and see how many of them experience lower blood pressure levels. The second scientist wants to give the drug to 500 people with high blood pressure, and not give the drug to another 500 people with high blood pressure, and see how many in both groups experience lower blood pressure levels. Which is the better way to test this drug?
 
-&gt;- **500 get the drug, 500 don't**
+--
+
+.center[
+**500 get the drug, 500 don't**
+]
 
 ---
 # Survey of Americans
@@ -394,7 +398,7 @@ mean(sampA$response)
 ```
 
 ```
-## [1] 0.544
+## [1] 0.568
 ```
 
 `\(\hat{p}\)` for the population sample, excluding group B 
@@ -405,7 +409,7 @@ mean(sampA[sampA$group == 'A',]$response)
 ```
 
 ```
-## [1] 0.540404
+## [1] 0.5674044
 ```
 
 `\(\hat{p}\)` for group B sample
@@ -416,7 +420,7 @@ mean(sampB$response)
 ```
 
 ```
-## [1] 0.58
+## [1] 0.48
 ```
 
 ---
