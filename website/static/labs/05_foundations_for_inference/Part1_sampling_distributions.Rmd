@@ -195,6 +195,7 @@ In the remainder of this section, you will work on getting a sense of the effect
 
 ```{r shiny, echo=FALSE, eval=FALSE, results = TRUE}
 # This R chunk will only run in interactive mode.
+library(shiny)
 shinyApp(
   ui <- fluidPage(
     

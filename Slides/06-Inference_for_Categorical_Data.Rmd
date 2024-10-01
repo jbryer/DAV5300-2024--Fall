@@ -65,7 +65,11 @@ ompWordCloud(omp$`What important question remains unanswered for you?`)
 
 Two scientists want to know if a certain drug is effective against high blood pressure. The first scientist wants to give the drug to 1,000 people with high blood pressure and see how many of them experience lower blood pressure levels. The second scientist wants to give the drug to 500 people with high blood pressure, and not give the drug to another 500 people with high blood pressure, and see how many in both groups experience lower blood pressure levels. Which is the better way to test this drug?
 
->- **500 get the drug, 500 don't**
+--
+
+.center[
+**500 get the drug, 500 don't**
+]
 
 ---
 # Survey of Americans
