@@ -70,6 +70,8 @@ website:
             text: "Software"
           - href: "course/materials.qmd"
             text: "Materials"
+          - href: "assignments/project.qmd"
+            text: "Data Project"
       - section: "Topics"
         contents:
           - href: chapters/chapter1.qmd

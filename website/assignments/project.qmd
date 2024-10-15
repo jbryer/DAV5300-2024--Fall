@@ -21,8 +21,6 @@ The proposal can be more informal using bullet points where necessary and includ
 * Explanatory: What is the explanatory variable(s), and what type is it (numerical/categorical)?
 * Relevant summary statistics 
 
-* [Download project proposal template](/static/project/proposal_template.Rmd)
-* [Download project template](/static/project/project_template.Rmd)
 
 
 ## Final Project
