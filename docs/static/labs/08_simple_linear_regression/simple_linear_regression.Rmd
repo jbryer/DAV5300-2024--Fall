@@ -89,9 +89,7 @@ DATA606::plot_ss(x = hfi$pf_expression_control, y = hfi$pf_score)
 
 After running this command, you'll be prompted to click two points on the plot to define a line. Once you've done that, the line you specified will be shown in black and the residuals in blue. Note that there are 30 residuals, one for each of the 30 observations. Recall that the residuals are the difference between the observed values and the values predicted by the line:
 
-\[
-  e_i = y_i - \hat{y}_i
-\]
+$$ e_i = y_i - \hat{y}_i $$
 
 The most common way to do linear regression is to select the line that minimizes the sum of squared residuals. To visualize the squared residuals, you can rerun the plot command and add the argument `showSquares = TRUE`.
 
@@ -125,9 +123,7 @@ summary(m1)
 
 Let's consider this output piece by piece. First, the formula used to describe the model is shown at the top. After the formula you find the five-number summary of the residuals. The "Coefficients" table shown next is key; its first column displays the linear model's y-intercept and the coefficient of `pf_expression_control`. With this table, we can write down the least squares regression line for the linear model:
 
-\[
-  \hat{y} = 4.61707 + 0.49143 \times pf\_expression\_control
-\]
+$$ \hat{y} = 4.61707 + 0.49143 \times pf\_expression\_control $$
 
 One last piece of information we will discuss from the summary output is the Multiple R-squared, or more simply, $R^2$. The $R^2$ value represents the proportion of variability in the response variable that is explained by the explanatory variable. For this model, 63.42% of the variability in runs is explained by at-bats.
 

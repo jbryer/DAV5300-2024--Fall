@@ -291,7 +291,7 @@ optim.rss$par
 ```
 
 ```
-## [1] 37.285117 -5.344469
+## [1] 37.285114 -5.344468
 ```
 
 --
@@ -412,7 +412,7 @@ optim.ll$par[1:2]
 ```
 
 ```
-## [1] 37.285217 -5.344509
+## [1] 37.285150 -5.344475
 ```
 
 ``` r
@@ -431,7 +431,9 @@ class: font80
 
 This figure shows the estimated regression line for each iteration of the optimization procedure (on the left; OLS regression line in blue; MLE regression line in black) with the estimated parameters and log-likelihood for all iterations on the left. This Shiny app will allow you to explore this process interactively: `shiny_demo('mle')`
 
-&lt;img src="09-Logistic_Regression_files/figure-html/optim_animation-1.gif" style="display: block; margin: auto;" /&gt;
+
+
+&lt;img src="09-Logistic_Regression_optim_animation.gif" style="display: block; margin: auto;" /&gt;
 
 ---
 class: code80
@@ -446,12 +448,12 @@ VisualStats::plot_likelihood(x = mtcars$wt, y = mtcars$mpg, pt = 2,
 						   sigma = optim.ll$par[3])
 ```
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # Likelihood Visualized &lt;img src="images/hex/visualMLE.png" class="title-hex"&gt;
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-27-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 class: font80
@@ -482,7 +484,7 @@ optim.ll$par[3]
 ```
 
 ```
-## [1] 2.949156
+## [1] 2.949167
 ```
 
 ``` r
@@ -512,11 +514,11 @@ study[sample(nrow(study), 5),]
 
 ```
 ##    Hours Pass
-## 18  4.75    1
-## 16  4.25    1
+## 15  4.00    1
+## 19  5.00    1
 ## 11  2.75    1
-## 5   1.50    0
-## 14  3.50    0
+## 9   2.25    1
+## 8   2.00    0
 ```
 
 ``` r
@@ -535,7 +537,7 @@ ggplot(study, aes(x = Pass, y = Hours)) + geom_point(alpha = 0.5) +
 	geom_smooth(method = lm, se = FALSE, formula = y ~ x) + coord_flip()
 ```
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-31-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-32-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -582,7 +584,7 @@ ggplot(study, aes(x = Hours, y = linear_resid)) +
 	ggtitle('Residual Plot')
 ```
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-33-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-34-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -658,7 +660,7 @@ logistic &lt;- function(t) { return(1 / (1 + exp(-t))) }
 ggplot() + stat_function(fun = logistic, n = 101) +  xlim(-4, 4) + xlab('t')
 ```
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-34-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # *t* as a Linear Function
@@ -716,7 +718,9 @@ optim.binomial$par
 ---
 # How did the optimizer get to this result?
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-37-1.gif" style="display: block; margin: auto;" /&gt;
+
+
+&lt;img src="09-Logistic_Regression_optim_animation_logit.gif" style="display: block; margin: auto;" /&gt;
 
 ---
 class: font90
@@ -755,7 +759,7 @@ optim.binomial$par
 ---
 # Plotting the Results
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-40-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-41-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 # But why log likelihood?
@@ -768,14 +772,14 @@ Since we know our outcomes are either zero or one, and hence bounded by zero and
 ggplot() + geom_function(fun = log) + xlim(0, 1)
 ```
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-41-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
 
 Since `\(log(1) = 0\)`, we want to reverse the likelihood, that is, we will take the `\(log(1 - likelihood)\)` so that smaller errors result in larger log-likelihood values.
 
 ---
 # But why log likelihood?
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -799,7 +803,7 @@ lr.out &lt;- glm(Pass ~ Hours, data = study,
 plot_linear_assumption_check(lr.out, n_groups = 5)
 ```
 
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -828,7 +832,7 @@ class: left, font140
 2. What important question remains unanswered for you?
 ]
 .pull-right[
-&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="09-Logistic_Regression_files/figure-html/unnamed-chunk-45-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 https://forms.gle/U4UXAosdjHorxY919
