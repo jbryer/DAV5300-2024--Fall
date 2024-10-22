@@ -9,7 +9,6 @@ dplyr
 stringr
 forcats
 lubridate
-countdown
 xtable
 likert
 NLP
@@ -30,6 +29,7 @@ latex2exp
 psych
 cowplot
 rmarkdown
+qrcode
 gganimate
 magick
 DT
